@@ -42,7 +42,6 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                   children: [
                     Stack(
                       children: [
-                        
                         SizedBox(
                           height: MediaQuery.of(context).size.height *
                               0.5, // 50 percent of screen's height
