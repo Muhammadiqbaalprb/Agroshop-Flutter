@@ -53,7 +53,7 @@ class _OTPFormState extends State<OTPForm> {
                 0.13, // 13% of the screen's height
           ),
           CustomButton(
-            title: "Continue",
+            title: "Selanjutnya",
             backgroundColor: primaryColor,
             forgroundColor: Colors.white,
             onPressed: () {
@@ -73,7 +73,7 @@ class _OTPFormState extends State<OTPForm> {
           ),
           TextButton(
             child: const Text(
-              "Resend OTP code",
+              "Kirim Ulang Kode OTP",
               style: TextStyle(
                   decoration: TextDecoration.underline,
                   color: Colors.black,

@@ -36,11 +36,12 @@ class WelcomeBack extends StatelessWidget {
           const Align(
             alignment: Alignment.center,
             child: Text(
-              "Welcome\nBack",
+              "Selamat Datang",
               style: TextStyle(
                   fontWeight: FontWeight.w800,
                   fontSize: 55,
                   color: Colors.white),
+              textAlign: TextAlign.center,
             ),
           ),
           Positioned(

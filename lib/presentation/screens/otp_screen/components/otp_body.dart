@@ -16,14 +16,14 @@ class OTPBody extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.06,
             ),
             Text(
-              "OTP Verification",
+              "OTP Verifikasi",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: MediaQuery.of(context).size.width * 0.07,
                   color: Colors.black,
                   letterSpacing: 2),
             ),
-            const Text("We sent your code to +963 999 *** ***"),
+            const Text("Kami mengirim kode Anda ke +62813-7099-3400"),
             const HorizontalTimer(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.15,

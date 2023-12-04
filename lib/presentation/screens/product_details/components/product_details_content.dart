@@ -12,10 +12,10 @@ import 'product_description.dart';
 import 'product_images.dart';
 import 'top_rounded_container.dart';
 
-
 class DetailsScreenContent extends StatelessWidget {
   final Product product;
-  const DetailsScreenContent({Key? key,required this.product}) : super(key: key);
+  const DetailsScreenContent({Key? key, required this.product})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,24 +25,27 @@ class DetailsScreenContent extends StatelessWidget {
         children: [
           ProductImages(product: product),
           TopRoundedContainer(
-                color: Colors.white,
-                child: Column(
-                  children: [
-                    ProductDescription(product: product, onSeeMorePressed: (){}),
-                    Padding(
-                      padding:  EdgeInsets.symmetric(vertical: SizeConfig.getProportionateScreenHeight(8.0)),
-                      child: DefaultButton(
-                        text: "Add to basket",
-                        backgroundColor: primaryColor,
-                        forgroundColor: Colors.white,
-                        onPressed: (){
-                          bloc.add(AddProductToCartEvent(cartItem: CartItem(product: product,quantity: Random().nextInt(10))));
-                        },
-                      ),
+              color: Colors.white,
+              child: Column(
+                children: [
+                  ProductDescription(product: product, onSeeMorePressed: () {}),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: SizeConfig.getProportionateScreenHeight(8.0)),
+                    child: DefaultButton(
+                      text: "Tambah Ke Keranjang",
+                      backgroundColor: primaryColor,
+                      forgroundColor: Colors.white,
+                      onPressed: () {
+                        bloc.add(AddProductToCartEvent(
+                            cartItem: CartItem(
+                                product: product,
+                                quantity: Random().nextInt(10))));
+                      },
                     ),
-                  ],
-                )
-              ),
+                  ),
+                ],
+              )),
         ],
       ),
     );

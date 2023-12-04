@@ -45,7 +45,7 @@ class CartAppBar extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  "Basket",
+                  "Keranjang",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,

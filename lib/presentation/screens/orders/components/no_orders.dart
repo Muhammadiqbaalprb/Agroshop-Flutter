@@ -8,16 +8,20 @@ class NoOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 50,),
+        const SizedBox(
+          height: 50,
+        ),
         SizedBox(
           child: Image.asset(
             "assets/images/no_order.png",
             fit: BoxFit.contain,
           ),
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         const Text(
-          "No history yet",
+          "Belum ada belanja",
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.black,
@@ -26,13 +30,15 @@ class NoOrder extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         const Opacity(
           opacity: 0.57,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 80),
             child: Text(
-              "Hit the button down below to Create an order",
+              "Tekan tombol di bawah untuk Membuat pesanan",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
@@ -44,10 +50,10 @@ class NoOrder extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 15),
           child: DefaultButton(
-            onPressed: (){},
+            onPressed: () {},
             backgroundColor: const Color(0xff57bfe9),
             forgroundColor: Colors.white,
-            text: "Start ordering",
+            text: "Mulai Belanja",
             width: 250,
             height: 60,
           ),

@@ -4,8 +4,6 @@ import 'package:store/Utilities/size_config.dart';
 
 import 'product_card.dart';
 
-
-
 class PopularProducts extends StatefulWidget {
   const PopularProducts({Key? key}) : super(key: key);
 
@@ -20,35 +18,34 @@ class _PopularProductsState extends State<PopularProducts> {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: SizeConfig.getProportionateScreenWidth(20)),
-            child:  TextButton(
-                child: const Text("Popular Products"),
-                onPressed: (){},
-                ),
+              horizontal: SizeConfig.getProportionateScreenWidth(20)),
+          child: TextButton(
+            child: const Text("Rekomendasi"),
+            onPressed: () {},
           ),
-            SizedBox(height: SizeConfig.getProportionateScreenWidth(20)),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(
-                35,10,10,20
-              ),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+        ),
+        SizedBox(height: SizeConfig.getProportionateScreenWidth(20)),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(35, 10, 10, 20),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Column(
+              children: [
+                Row(
                   children: [
-                    ...List.generate(
-                      demoProducts.length,
-                        (index) {
-                            if(demoProducts[index].isPopular){
-                              return ProductCard(product:demoProducts[index]);
-                            }
-                            return const SizedBox.shrink();
-                        }
-                    ),
+                    ...List.generate(demoProducts.length, (index) {
+                      if (demoProducts[index].isPopular) {
+                        return ProductCard(product: demoProducts[index]);
+                      }
+                      return const SizedBox.shrink();
+                    }),
                     SizedBox(width: SizeConfig.getProportionateScreenWidth(40)),
                   ],
                 ),
-        ),
-            )
+              ],
+            ),
+          ),
+        )
       ],
     );
   }

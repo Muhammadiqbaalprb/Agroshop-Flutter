@@ -31,7 +31,8 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
           children: [
             const Flexible(
               flex: 2,
-              child: Text("Find Your\nGadget", style: splashHeadingTextStyle),
+              child: Text("Temukan Material Anda\nDisini",
+                  style: splashHeadingTextStyle, textAlign: TextAlign.center),
             ),
             Flexible(
               flex: 5,
@@ -39,10 +40,15 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                 opacity: _animation,
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height *
-                          0.5, // 50 percent of screen's height
-                      child: Image.asset("assets/images/splash.png"),
+                    Stack(
+                      children: [
+                        
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height *
+                              0.5, // 50 percent of screen's height
+                          child: Image.asset("assets/images/splash.png"),
+                        ),
+                      ],
                     ),
                     Container(
                       height: MediaQuery.of(context).size.height * 0.08,
@@ -60,7 +66,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                   CustomScaleTransition(
                       nextPageUrl: SignInScreen.routeName,
                       nextPage: const SignInScreen())),
-              title: "Get Started",
+              title: "Mulai",
             ),
             const SizedBox(
               height: 10,

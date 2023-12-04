@@ -60,7 +60,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                               return ItemCard(
                                   image: state.favoriteProducts[index].image,
                                   price:
-                                      "From ${state.favoriteProducts[index].price}",
+                                      "${state.favoriteProducts[index].price}",
                                   title: state.favoriteProducts[index].title,
                                   evenItem: (index % 2 == 0) ? true : false,
                                   onTap: () => Navigator.pushNamed(

@@ -13,7 +13,7 @@ class ShippingCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              "Shipping information",
+              "Informasi Pembayaran",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 17,
@@ -21,67 +21,108 @@ class ShippingCard extends StatelessWidget {
               ),
             ),
             TextButton(
-                onPressed: (){},
-                child: const Text("change",style: TextStyle(
-                  color: Color(0xff5956e9),
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                ),))
+                onPressed: () {},
+                child: const Text(
+                  "Ganti",
+                  style: TextStyle(
+                    color: Color(0xff5956e9),
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ))
           ],
         ),
         Container(
           margin: const EdgeInsets.only(top: 10),
-          decoration:  BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(25)
-          ),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(25)),
           child: Padding(
-            padding: const EdgeInsets.only(left: 10,right: 30),
+            padding: const EdgeInsets.only(left: 10, right: 30),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 25,),
-                Row(
-                  children: const [
-                     SizedBox(width: 18,),
-                     Icon(FontAwesomeIcons.user,color: Colors.black,size: 20,),
-                     SizedBox(width: 13,),
-                     Text("Joe Doe",style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                         fontFamily: "Serif"
-                    ),),
-                  ],
+                const SizedBox(
+                  height: 25,
                 ),
-                const SizedBox(height: 25,),
                 Row(
                   children: const [
-                    SizedBox(width: 12,),
-                    Icon(Icons.location_on_outlined,color: Colors.black,size: 30,),
-                    SizedBox(width: 10,),
-                    Expanded(
-                      child: Text("Airport Road Damascus, Syria",style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontFamily: "Serif",
-                      ),),
+                    SizedBox(
+                      width: 18,
+                    ),
+                    Icon(
+                      FontAwesomeIcons.user,
+                      color: Colors.black,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      width: 13,
+                    ),
+                    Text(
+                      "Rayhan",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontFamily: "Serif"),
                     ),
                   ],
                 ),
-                const SizedBox(height: 25,),
+                const SizedBox(
+                  height: 25,
+                ),
                 Row(
                   children: const [
-                    SizedBox(width: 12,),
-                    Icon(Icons.phone_in_talk_outlined,color: Colors.black,size: 30,),
-                    SizedBox(width: 10,),
-                    Text("+963 123456789",style: TextStyle(
+                    SizedBox(
+                      width: 12,
+                    ),
+                    Icon(
+                      Icons.location_on_outlined,
                       color: Colors.black,
-                      fontFamily: "Serif",
-                      fontSize: 15,
-                    ),),
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Text(
+                        "Jl Gatot Subroto no.15C",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontFamily: "Serif",
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                const SizedBox(height: 25,),
+                const SizedBox(
+                  height: 25,
+                ),
+                Row(
+                  children: const [
+                    SizedBox(
+                      width: 12,
+                    ),
+                    Icon(
+                      Icons.phone_in_talk_outlined,
+                      color: Colors.black,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "081370993400",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "Serif",
+                        fontSize: 15,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
               ],
             ),
           ),

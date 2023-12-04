@@ -11,8 +11,10 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return const Scaffold(
-      appBar: CustomAppBar(title: "My Profile",),
-      body:  ProfileContent(),
+      appBar: CustomAppBar(
+        title: "Profilku",
+      ),
+      body: ProfileContent(),
     );
   }
 }

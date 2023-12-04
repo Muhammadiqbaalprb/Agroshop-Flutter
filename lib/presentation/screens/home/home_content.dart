@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:store/presentation/screens/home/about_us.dart';
 import 'package:store/presentation/screens/home/components/popular_product.dart';
 import 'package:store/presentation/widgets/custom_bottom_navbar.dart';
 import 'package:store/constants/colors.dart';
 import 'package:store/constants/enums.dart';
+import 'package:store/presentation/widgets/custom_page_transition.dart';
 import 'components/categories.dart';
 import '../../widgets/search_field.dart';
 import 'components/special_offers.dart';
-import 'components/text_banner.dart';
+import 'components/news_banner.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({Key? key}) : super(key: key);
@@ -43,12 +45,37 @@ class _HomeContentState extends State<HomeContent> {
         child: ListView(
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.03,
+              height: 10,
+            ),
+            Row(
+              children: [
+                IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          CustomScaleTransition(
+                              nextPageUrl: AboutUs.routeName,
+                              nextPage: const AboutUs()));
+                    },
+                    icon: Image.asset(
+                      "assets/images/upt.png",
+                      width: 60,
+                      height: 60,
+                    )),
+                Text(
+                  "UPT Mektan Provinsi Sumatera Utara",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
+              ],
             ),
             // Header component
             Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: MediaQuery.of(context).size.width * 0.08),
+                  horizontal: MediaQuery.of(context).size.width * 0.03),
               child: Row(
                 children: [
                   isDrawerOpen
@@ -87,7 +114,7 @@ class _HomeContentState extends State<HomeContent> {
               ),
             ),
             // Banner component
-            const TextBanner(),
+            NewsBanner(),
             // Categories component
             Categories(),
             // Special Offers component

@@ -56,7 +56,7 @@ const priceTextStyle = TextStyle(
 );
 
 const TextStyle splashHeadingTextStyle = TextStyle(
-  fontSize: 55,
+  fontSize: 50,
   fontWeight: FontWeight.w800,
   color: Colors.white,
 );

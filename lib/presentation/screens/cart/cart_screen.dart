@@ -18,7 +18,7 @@ class CartScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(AppBar().preferredSize.height + SizeConfig.getProportionateScreenHeight(40)),
       child:  CustomAppBar(
-        title: "Basket",
+        title: "Keranjang",
         icon: const Icon(Icons.restore_from_trash,color: Colors.redAccent,),
         onIconTapped: (){
           bloc.add(const ClearCartContentEvent());

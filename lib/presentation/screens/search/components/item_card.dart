@@ -3,16 +3,17 @@ import 'package:store/Utilities/size_config.dart';
 import 'package:store/constants/colors.dart';
 
 class ItemCard extends StatelessWidget {
-  final String?  image, title, price;
+  final String? image, title, price;
   final GestureTapCallback onTap;
   final bool evenItem;
 
   const ItemCard(
       {Key? key,
-        required this.image,
-        required this.onTap,
-        required this.title,
-        required this.price, required this.evenItem})
+      required this.image,
+      required this.onTap,
+      required this.title,
+      required this.price,
+      required this.evenItem})
       : super(key: key);
 
   @override
@@ -45,21 +46,25 @@ class ItemCard extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Column(
                           children: [
-                            SizedBox(height: SizeConfig.getProportionateScreenHeight(90),),
+                            SizedBox(
+                              height:
+                                  SizeConfig.getProportionateScreenHeight(90),
+                            ),
                             Text(
                               title!,
                               style: const TextStyle(
                                 color: Colors.black,
-                                fontSize: 20,
+                                fontSize: 17,
                                 fontFamily: "Raleway",
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                             SizedBox(
-                              height: SizeConfig.getProportionateScreenHeight(10),
+                            SizedBox(
+                              height:
+                                  SizeConfig.getProportionateScreenHeight(10),
                             ),
                             Text(
-                              "\$$price",
+                              "\Rp$price",
                               style: const TextStyle(
                                 color: Color(0xff5956e9),
                                 fontSize: 17,

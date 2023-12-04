@@ -28,7 +28,7 @@ class SpecialOffers extends StatelessWidget {
                   ),
                   child: TextButton(
                     child: const Text(
-                      "Special For you!",
+                      "Spesial Untuk Kamu!",
                     ),
                     onPressed: () {},
                   ),
@@ -54,8 +54,8 @@ class SpecialOffers extends StatelessWidget {
                                           category:
                                               state.products[index].category,
                                           image: state.products[index].image,
-                                          price: state.products[index].price,
                                           title: state.products[index].title,
+                                          price: state.products[index].price,
                                           onTap: () => Navigator.pushNamed(
                                               context,
                                               ProductDetailsScreen.routeName,
@@ -72,7 +72,7 @@ class SpecialOffers extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    const Text("See more", style: textStyle),
+                                    const Text("Lainnya", style: textStyle),
                                     SizedBox(
                                       width: SizeConfig
                                           .getProportionateScreenHeight(5),

@@ -8,15 +8,12 @@ import 'presentation/bloc/cart/cart_bloc.dart';
 import 'presentation/bloc/search/search_bloc.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
-
     return MultiBlocProvider(
       providers: [
         BlocProvider<FavoriteBloc>(
@@ -34,11 +31,10 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Your Store',
+          title: 'Agro rental App',
           theme: ThemeData(fontFamily: 'Raleway'),
           initialRoute: SplashScreen.routeName,
-          routes: routes
-      ),
+          routes: routes),
     );
   }
 }

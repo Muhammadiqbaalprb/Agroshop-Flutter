@@ -4,12 +4,12 @@ import 'package:store/constants/colors.dart';
 
 class SpecialOfferCard extends StatelessWidget {
   final String? category, image, title;
-  final double price;
+  final String price;
   final GestureTapCallback onTap;
 
   const SpecialOfferCard(
       {Key? key,
-       this.category,
+      this.category,
       required this.image,
       required this.onTap,
       required this.title,
@@ -28,7 +28,7 @@ class SpecialOfferCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: SizeConfig.getProportionateScreenWidth(220),
+        width: SizeConfig.getProportionateScreenWidth(200),
         height: SizeConfig.getProportionateScreenWidth(300),
         child: Stack(
           children: [
@@ -47,34 +47,34 @@ class SpecialOfferCard extends StatelessWidget {
                         SizedBox(
                           height: SizeConfig.getProportionateScreenHeight(150),
                         ),
-                         Text(
+                        Text(
                           title!,
                           style: const TextStyle(
                             color: Colors.black,
-                            fontSize: 22,
+                            fontSize: 16,
                             fontFamily: "Raleway",
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                         const SizedBox(
                           height: 4,
                         ),
-                         if(category != null)
-                           Text(
-                           category!,
-                           style: const TextStyle(
-                             color:  Color(0xff858585),
-                             fontSize: 16,
-                             fontFamily: "Raleway",
-                           ),
-                         ),
+                        if (category != null)
+                          Text(
+                            category!,
+                            style: const TextStyle(
+                              color: Color(0xff858585),
+                              fontSize: 16,
+                              fontFamily: "Raleway",
+                            ),
+                          ),
                         const SizedBox(
                           height: 15,
                         ),
                         Text(
-                          "\$$price",
+                          "\Rp$price",
                           style: const TextStyle(
-                            color: Color(0xff5956e9),
+                            color: Colors.green,
                             fontSize: 17,
                             fontFamily: "Raleway",
                             fontWeight: FontWeight.w700,

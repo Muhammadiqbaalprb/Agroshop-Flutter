@@ -4,6 +4,7 @@ import 'package:store/presentation/screens/sign_up/components/sign_up_form.dart'
 
 import 'complete_profile_form.dart';
 
+@immutable
 class CompleteProfileBody extends StatelessWidget {
    late ScreenArgs userData;
    CompleteProfileBody({Key? key,required this.userData}) : super(key: key);

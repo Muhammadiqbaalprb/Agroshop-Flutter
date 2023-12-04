@@ -22,7 +22,7 @@ class CheckoutAppBar extends StatelessWidget {
             backgroundColor: Colors.transparent,
             centerTitle: true,
             title: const Text(
-              "Checkout",
+              "Bayar",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,

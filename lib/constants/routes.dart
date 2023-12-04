@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 import 'package:store/presentation/screens/cart/cart_screen.dart';
 import 'package:store/presentation/screens/checkout/checkout_screen.dart';
 import 'package:store/presentation/screens/complete_profile/complete_profile.dart';
 import 'package:store/presentation/screens/favourite/favourite_screen.dart';
 import 'package:store/presentation/screens/forgot_password/forgot_password_screen.dart';
+import 'package:store/presentation/screens/home/about_us.dart';
 import 'package:store/presentation/screens/home/home_screen.dart';
 import 'package:store/presentation/screens/orders/orders_screen.dart';
 import 'package:store/presentation/screens/otp_screen/otp_screen.dart';
@@ -26,5 +28,6 @@ final Map<String, WidgetBuilder> routes = {
   OTPScreen.routeName: (context) => const OTPScreen(),
   CheckoutScreen.routeName: (context) => const CheckoutScreen(),
   FavouriteScreen.routeName: (context) => const FavouriteScreen(),
-  OrderScreen.routeName: (context) => const OrderScreen()
+  OrderScreen.routeName: (context) => const OrderScreen(),
+  AboutUs.routeName: (context) => const AboutUs()
 };

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Color(0xff6350ff);
+const Color primaryColor = Color.fromARGB(255, 40, 185, 45);
 const Color lightPrimaryColor = Color(0xFFFFECDF);
 
 const Color secondaryColor = Color(0xFF979797);
@@ -16,7 +16,7 @@ const Color searchFieldTextColor = Color(0xff858585);
 const primaryGradientColor = LinearGradient(
   begin: Alignment.topCenter,
   end: Alignment.bottomCenter,
-  colors: [Color.fromRGBO(89, 86, 233, 0.88), Color.fromRGBO(89, 86, 233, 1)],
+  colors: [Color.fromARGB(255, 40, 185, 45), Color.fromARGB(255, 40, 185, 45)],
 );
 
 const circleGradientColor = LinearGradient(

@@ -11,6 +11,7 @@ class HomeHeader extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
           horizontal: SizeConfig.getProportionateScreenWidth(40)),
+
       // Row contains three widgets Search Bar - Cart Icon - Num of Items
       child: Row(
         children: [

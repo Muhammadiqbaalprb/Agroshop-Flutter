@@ -16,7 +16,7 @@ class OTPScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: primaryColor,
-        title: const Text("OTP Verification"),
+        title: const Text("OTP Verifikasi"),
       ),
       body: const OTPBody(),
     );

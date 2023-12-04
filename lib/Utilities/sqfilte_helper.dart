@@ -56,7 +56,7 @@ class SqliteDbHelper{
     // Enable foreign key support
     database.execute("PRAGMA foreign_keys = ON;");
     // insert a list and an item to list, items tables
-    await database.execute('Insert into users VALUES("ali","ali@gmail.com","123456")');
+    await database.execute('Insert into users VALUES("Iqbal","iqbalrama45@gmail.com","123456")');
 
     List users = await database.rawQuery("Select * from users");
     if (kDebugMode) {

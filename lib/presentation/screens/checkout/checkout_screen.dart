@@ -13,9 +13,11 @@ class CheckoutScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(AppBar().preferredSize.height + SizeConfig.getProportionateScreenHeight(40)),
-          child: const CustomAppBar(title: "Checkout",)
-      ),
+          preferredSize: Size.fromHeight(AppBar().preferredSize.height +
+              SizeConfig.getProportionateScreenHeight(40)),
+          child: const CustomAppBar(
+            title: "Bayar",
+          )),
       body: const CheckoutBody(),
     );
   }

@@ -46,7 +46,7 @@ class CheckoutCard extends StatelessWidget {
                   child: const Icon(Icons.receipt),
                 ),
                 const Spacer(),
-                const Text("Add voucher code"),
+                const Text("Tambahkan Kode Voucer"),
                 const SizedBox(width: 8,),
                 const Icon(
                   Icons.arrow_forward_ios,size: 12,color: textColor,
@@ -60,7 +60,7 @@ class CheckoutCard extends StatelessWidget {
                         text: "Total:\n",
                         children: [
                           TextSpan(
-                            text: "\$337.15",
+                            text: "\Rp.337.15",
                             style: TextStyle(fontSize: 16, color: Colors.black),
                           ),
                         ],
@@ -70,7 +70,7 @@ class CheckoutCard extends StatelessWidget {
                     SizedBox(
                       width: SizeConfig.getProportionateScreenWidth(100),
                       child: DefaultButton(
-                        text: "Checkout",
+                        text: "Bayar",
                         onPressed: (){},
                       )
                     ),

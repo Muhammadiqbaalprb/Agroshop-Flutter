@@ -51,7 +51,7 @@ class CartItemCard extends StatelessWidget {
               height: 10,
             ),
             Text(
-                "\$${cartItem.product.price}",
+                "\Rp${cartItem.product.price}",
               style: const TextStyle(
                 fontWeight: FontWeight.w600,color: primaryColor,
               ),
@@ -60,7 +60,7 @@ class CartItemCard extends StatelessWidget {
           Row(
             children: [
               const Text(
-                "Quantity",
+                "Stok",
                   style: TextStyle(
                   color: Colors.black,
                   fontSize: 13,

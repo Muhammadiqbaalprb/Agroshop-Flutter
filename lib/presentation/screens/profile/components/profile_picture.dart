@@ -13,39 +13,46 @@ class ProfilePicture extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            margin: const EdgeInsets.only(top:25),
+            margin: const EdgeInsets.only(top: 25),
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20)
-            ),
+                color: Colors.white, borderRadius: BorderRadius.circular(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 25,),
-                const Text("Joe Doe",
+                const SizedBox(
+                  height: 25,
+                ),
+                const Text(
+                  "Rayhan",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontFamily: "Serif"
-                ),),
-                const SizedBox(height: 10,),
+                      color: Colors.black, fontSize: 15, fontFamily: "Serif"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
-                    Icon(Icons.location_on_outlined,color: Colors.black,size: 30,),
-                    SizedBox(width: 10,),
+                    Icon(
+                      Icons.location_on_outlined,
+                      color: Colors.black,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Text(
-                        "Address: 43 Oxford Road M13\n4GR Manchester, UK",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
+                      "Alamat: Jl Gatot Subroto No.15C",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
                       ),
                     ),
                   ],
                 )
-            ],
+              ],
             ),
           ),
           // To add rounded image
@@ -54,8 +61,10 @@ class ProfilePicture extends StatelessWidget {
             child: SizedBox(
               height: 56,
               width: 56,
-              child:  CircleAvatar(
-                backgroundImage: AssetImage("assets/images/fashion.jpg",),
+              child: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "assets/images/Profil.png",
+                ),
               ),
             ),
           )
