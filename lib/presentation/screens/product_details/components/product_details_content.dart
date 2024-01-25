@@ -38,9 +38,10 @@ class DetailsScreenContent extends StatelessWidget {
                       forgroundColor: Colors.white,
                       onPressed: () {
                         bloc.add(AddProductToCartEvent(
-                            cartItem: CartItem(
+                            cartItem: CartItems(
                                 product: product,
-                                quantity: Random().nextInt(10))));
+                                quantity: Random().nextInt(10),
+                                price: '')));
                       },
                     ),
                   ),

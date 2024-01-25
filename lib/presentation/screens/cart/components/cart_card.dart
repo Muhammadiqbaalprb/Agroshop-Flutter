@@ -8,11 +8,12 @@ import 'package:store/presentation/bloc/cart/cart_bloc.dart';
 import 'package:store/presentation/bloc/cart/cart_event.dart';
 import 'icon_button.dart';
 
-
 class CartItemCard extends StatelessWidget {
-  final CartItem cartItem;
+  final CartItems cartItem;
   final int itemIndex;
-  const CartItemCard({Key? key, required this.cartItem, required this.itemIndex}) : super(key: key);
+  const CartItemCard(
+      {Key? key, required this.cartItem, required this.itemIndex})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,8 @@ class CartItemCard extends StatelessWidget {
           child: AspectRatio(
             aspectRatio: 0.88,
             child: Container(
-              padding: EdgeInsets.all(SizeConfig.getProportionateScreenWidth(10)),
+              padding:
+                  EdgeInsets.all(SizeConfig.getProportionateScreenWidth(10)),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
@@ -38,63 +40,83 @@ class CartItemCard extends StatelessWidget {
           ),
         ),
         // Product's details
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 10,),
-            Text(
-              cartItem.product.title,
-              style: const TextStyle(color: Colors.black, fontSize: 16),
-              maxLines: 2,
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            cartItem.product.title,
+            style: const TextStyle(color: Colors.black, fontSize: 16),
+            maxLines: 2,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            "\Rp.${cartItem.product.price}",
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+              color: primaryColor,
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-                "\Rp${cartItem.product.price}",
-              style: const TextStyle(
-                fontWeight: FontWeight.w600,color: primaryColor,
-              ),
-            ),
-          const SizedBox(height: 10,),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
           Row(
             children: [
               const Text(
                 "Stok",
-                  style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 13,
-                  letterSpacing: 0.52,
-                    fontFamily: "Serif"
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 13,
+                    letterSpacing: 0.52,
+                    fontFamily: "Serif"),
               ),
+              const SizedBox(
+                width: 10,
               ),
-              const SizedBox(width: 10,),
               CartIconButton(
-                icon: const Icon(FontAwesomeIcons.minus,size: 10,color: Colors.white,),
-                onTap: (){},
+                icon: const Icon(
+                  FontAwesomeIcons.minus,
+                  size: 10,
+                  color: Colors.white,
+                ),
+                onTap: () {},
                 backgroundColor: const Color(0xff7ccbeb),
               ),
-              const SizedBox(width: 8,),
+              const SizedBox(
+                width: 8,
+              ),
               Text("${cartItem.quantity}"),
-              const SizedBox(width: 8,),
+              const SizedBox(
+                width: 8,
+              ),
               CartIconButton(
-                icon: const Icon(FontAwesomeIcons.plus,size: 10,color: Colors.white,),
+                icon: const Icon(
+                  FontAwesomeIcons.plus,
+                  size: 10,
+                  color: Colors.white,
+                ),
                 backgroundColor: const Color(0xff7ccbeb),
-                onTap: () {}
-                ,
+                onTap: () {},
               )
             ],
           ),
-          ]),
-        const SizedBox(width: 10,),
+        ]),
+        const SizedBox(
+          width: 10,
+        ),
         IconButton(
-            onPressed: (){
-              bloc.add(RemoveProductFromCartEvent(itemIndex));
-            },
-            icon: const Icon(Icons.close,color: Colors.redAccent,),
+          onPressed: () {
+            bloc.add(RemoveProductFromCartEvent(itemIndex));
+          },
+          icon: const Icon(
+            Icons.close,
+            color: Colors.redAccent,
+          ),
           splashRadius: 2,
         )
-          ],
-        );
+      ],
+    );
   }
 }

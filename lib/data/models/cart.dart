@@ -2,7 +2,7 @@ import 'package:store/data/models/product.dart';
 import 'cart_item.dart';
 
 class Cart {
-  late final List<CartItem> products;
+  late final List<CartItems> products;
 
   Cart({required this.products});
 
@@ -22,12 +22,12 @@ class Cart {
 }
 
 Cart demoCart = Cart(products: [
-  CartItem(product: demoProducts[1], quantity: 1),
-  CartItem(product: demoProducts[3], quantity: 1),
-  CartItem(product: demoProducts[0], quantity: 2),
-  CartItem(product: demoProducts[1], quantity: 1),
-  CartItem(product: demoProducts[3], quantity: 1),
-  CartItem(product: demoProducts[0], quantity: 1),
-  CartItem(product: demoProducts[1], quantity: 1),
-  CartItem(product: demoProducts[3], quantity: 1),
+  CartItems(product: demoProducts[1], quantity: 1, price: ''),
+  CartItems(product: demoProducts[3], quantity: 1, price: ''),
+  CartItems(product: demoProducts[0], quantity: 1, price: ''),
+  CartItems(product: demoProducts[1], quantity: 1, price: ''),
+  CartItems(product: demoProducts[3], quantity: 1, price: ''),
+  CartItems(product: demoProducts[0], quantity: 1, price: ''),
+  CartItems(product: demoProducts[1], quantity: 1, price: ''),
+  CartItems(product: demoProducts[3], quantity: 1, price: ''),
 ]);

@@ -22,6 +22,7 @@ class CartScreen extends StatelessWidget {
         icon: const Icon(Icons.restore_from_trash,color: Colors.redAccent,),
         onIconTapped: (){
           bloc.add(const ClearCartContentEvent());
+          bloc.add(CalculateTotalEvent());
         },
       ),
       ),

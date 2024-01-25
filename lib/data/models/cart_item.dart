@@ -1,27 +1,27 @@
-
 import 'package:store/data/models/product.dart';
 
-class CartItem{
+class CartItems {
   late final Product product;
   late final int quantity;
+  late final String price;
 
-  CartItem({required this.product, required this.quantity});
+  CartItems({required this.product, required this.quantity, required this.price});
 
-  Map<String, dynamic> toMap()
-  {
+  Map<String, dynamic> toMap() {
     return {
-      'product' : product,
-      'quantity' : quantity
+      'product': product,
+      'quantity': quantity,
+      'price': price,
     };
   }
-  CartItem.fromMap(dynamic map){
+
+  CartItems.fromMap(dynamic map) {
     product = map['product'];
     quantity = map['quantity'];
+    price = map['price'];
   }
 
-  CartItem toEntity() => CartItem(
-      product: product,
-      quantity: quantity
-  );
+  CartItems toEntity() => CartItems(product: product, quantity: quantity, price: '');
 
+  static map(Function(dynamic product) param0) {}
 }

@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:store/constants/enums.dart';
+import 'package:store/presentation/widgets/custom_bottom_navbar.dart';
 import 'package:store/presentation/widgets/no_internet_connection.dart';
 import 'package:store/Utilities/size_config.dart';
 import 'components/custom_drawer.dart';
@@ -20,35 +22,37 @@ class _HomeScreenState extends State<HomeScreen> {
   late bool isDeviceConnected = true;
 
   @override
-  void initState(){
+  void initState() {
     checkConnectivity();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-    return  Scaffold(
-          body:  SafeArea(
-            child: (isDeviceConnected) ? Stack(
-              children: const [
-                 CustomDrawer(),
-                 HomeContent(),
-              ]
-            ): const NoInternet()
-          ),
-
+    return Scaffold(
+      bottomNavigationBar: CustomButtomNavBar(selectedMenu: MenuState.home),
+      body: SafeArea(
+          child: (isDeviceConnected)
+              ? Stack(children: const [
+                  CustomDrawer(),
+                  HomeContent(),
+                ])
+              : const NoInternet()),
     );
   }
 
-
-  Future<void> checkConnectivity() async{
-    subscription = Connectivity().onConnectivityChanged.listen((ConnectivityResult result) async{
+  Future<void> checkConnectivity() async {
+    subscription = Connectivity()
+        .onConnectivityChanged
+        .listen((ConnectivityResult result) async {
       isDeviceConnected = await InternetConnectionChecker().hasConnection;
       setState(() {
         isDeviceConnected = isDeviceConnected;
       });
     });
   }
+
   @override
   void dispose() {
     subscription.cancel();

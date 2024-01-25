@@ -158,6 +158,18 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "leak_tracker",
+      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-9.0.16",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0",
       "packageUri": "lib/",
@@ -171,13 +183,13 @@
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.5.0",
+      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.10.0",
+      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -308,8 +320,14 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "vm_service",
+      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-13.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "web",
-      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.2.1-beta",
+      "rootUri": "file:///C:/Users/IQBAL%20RAMADHAN%20PURBA/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -326,7 +344,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-11-28T14:06:58.753641Z",
+  "generated": "2023-12-24T16:46:23.526549Z",
   "generator": "pub",
-  "generatorVersion": "3.2.0-210.3.beta"
+  "generatorVersion": "3.3.0-174.3.beta"
 }

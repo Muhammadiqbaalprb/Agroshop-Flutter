@@ -50,7 +50,7 @@ class _CartBodyState extends State<CartBody> {
                             state.cartItems.isNotEmpty ||
                         state is CartItemRemovedSuccessfulyState)
                     ? Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: ListView.builder(
                           itemCount: demoCart.products.length,
                           itemBuilder: (context, index) => Padding(
@@ -63,6 +63,7 @@ class _CartBodyState extends State<CartBody> {
                                 direction: DismissDirection.endToStart,
                                 onDismissed: (direction) {
                                   bloc.add(RemoveProductFromCartEvent(index));
+                                  bloc.add(CalculateTotalEvent());
                                 },
                                 background: Container(
                                   padding: const EdgeInsets.symmetric(
@@ -108,9 +109,9 @@ class _CartBodyState extends State<CartBody> {
                               fontFamily: "Serif"),
                         ),
                         Text(
-                          "Rp. 11.387.489",
+                          'Total Harga: ${state.total.toString()}',
                           style: TextStyle(
-                            color: Colors.green,
+                            color: Color(0xff5956e9),
                             fontSize: 22,
                             fontWeight: FontWeight.w700,
                           ),

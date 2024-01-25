@@ -26,7 +26,7 @@ class SocialMediaBox extends StatelessWidget {
         ),
         Text(
           "Dengan melanjutkan, Anda mengonfirmasi bahwa \nAnda menyetujui syarat dan ketentuan kami",
-          style: Theme.of(context).textTheme.caption,
+          style: Theme.of(context).textTheme.bodySmall,
           textAlign: TextAlign.center,
         )
       ],

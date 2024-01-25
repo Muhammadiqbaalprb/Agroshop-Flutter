@@ -122,7 +122,7 @@ class _HomeContentState extends State<HomeContent> {
             // Popular products component
             const PopularProducts(),
 
-            const CustomButtomNavBar(selectedMenu: MenuState.home),
+            // const CustomButtomNavBar(selectedMenu: MenuState.home),
           ],
         ));
   }

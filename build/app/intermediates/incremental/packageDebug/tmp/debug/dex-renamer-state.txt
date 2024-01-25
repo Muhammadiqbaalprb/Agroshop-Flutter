@@ -1,4 +1,4 @@
-#Mon Dec 04 09:15:02 WIB 2023
+#Tue Jan 23 13:55:49 WIB 2024
 base.0=C\:\\Users\\IQBAL RAMADHAN PURBA\\Documents\\Flutter Project\\Project01\\flutter_ecommerce_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 base.1=C\:\\Users\\IQBAL RAMADHAN PURBA\\Documents\\Flutter Project\\Project01\\flutter_ecommerce_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.0=classes.dex
